@@ -49,3 +49,11 @@ li:hover {
     margin: 5px;
     border-radius: 5px;
 }
+
+#previous-button, #next-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 5px 5px 5px grey;
+}

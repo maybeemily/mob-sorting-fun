@@ -10,43 +10,34 @@ export default function loadPaging(totalCount) {
     totalPages.textContent = totalPageCount;
     
     let currentPageNumber = 1;
-    previousButton.disabled = currentPageNumber === 1;
-    currentPage.textContent = currentPageNumber;
+
+    updatePaging();
 
     nextButton.addEventListener('click', () => {
         currentPageNumber++;
 
-        currentPage.textContent = currentPageNumber;
-
-        const pagingOptions = {
-            page: currentPageNumber,
-            perPage: PER_PAGE
-        };
-
-        console.log(pagingOptions);
-
-        nextButton.disabled = currentPageNumber === totalPageCount;
-        previousButton.disabled = currentPageNumber === 1;
+        updatePaging();
     });
 
     previousButton.addEventListener('click', () => {
         currentPageNumber--;
 
-        currentPage.textContent = currentPageNumber;
-
-        const pagingOptions = {
-            page: currentPageNumber,
-            perPage: PER_PAGE
-        };
-
-        console.log(pagingOptions);
-
-        nextButton.disabled = currentPageNumber === totalPageCount;
-        previousButton.disabled = currentPageNumber === 1;
+        updatePaging();
     });
 
 
 
 
 
+
+    function updatePaging() {
+        currentPage.textContent = currentPageNumber;
+        const pagingOptions = {
+            page: currentPageNumber,
+            perPage: PER_PAGE
+        };
+        console.log(pagingOptions);
+        nextButton.disabled = currentPageNumber === totalPageCount;
+        previousButton.disabled = currentPageNumber === 1;
+    }
 }
