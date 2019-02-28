@@ -1,21 +1,9 @@
 import './html-equal.js';
+import makePokemonCard from '../src/pokemon-template.js';
 
 const test = QUnit.test;
 
-function makePokemonCard(pokemon) {
-    const html = `
-    <li>
-        <h2>${pokemon.pokemon}</h2>
-        <img src="${pokemon.url_image}">
-        <p>
-            <span>HP: ${pokemon.hp}</span> <span>A: ${pokemon.attack}</span> <span>D: ${pokemon.defense}</span>
-        </p>
-    </li>`;
 
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('template literal will appear same as static html', assert => {
     //arrange
@@ -24,6 +12,8 @@ test('template literal will appear same as static html', assert => {
         'attack': 49,
         'defense': 49,
         'hp': 45,
+        'color_1': '#78C850',
+        'color_2': '#A040A0',
         'url_image': 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png'
     };
 
