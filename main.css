@@ -18,6 +18,10 @@ li {
     margin: 5px;
 }
 
+li:hover {
+    box-shadow: 5px 5px 5px grey;
+}
+
 #pokemon-gallery {
     text-align: center;
     display: flex;
@@ -39,7 +43,7 @@ li {
     align-items: center;
 }
 
-.bold {
+.stats {
     background-color: white;
     padding: 5px;
     margin: 5px;
