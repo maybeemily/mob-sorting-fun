@@ -31,3 +31,10 @@ li {
     border-radius: 50%;
     display: inline-block;
 }
+
+#paging {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
