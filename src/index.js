@@ -1,9 +1,7 @@
 import data from '../data/pokedex.js';
-import makePokemonCard from './pokemon-template.js';
-const 
+import loadPokemon from './load-pokemon.js';
 
 const shortList = data.slice(0, 3);
-console.log(shortList);
 
-
+loadPokemon(shortList);
 
