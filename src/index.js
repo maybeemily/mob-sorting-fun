@@ -6,4 +6,6 @@ import loadPaging from './paging-component.js';
 
 loadPokemon(data);
 
-loadPaging(data.length);
+loadPaging(data.length, pagingOptions => {
+    console.log(pagingOptions);
+});
